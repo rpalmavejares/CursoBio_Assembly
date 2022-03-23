@@ -26,7 +26,7 @@ bash
 conda activate cursobio
 ```
 
-### Desde ahora en adelante, su ambiente de Anaconda ya esta activo en su home, por lo que la procima ves que desee usar programas, solo debera cargar:
+### Desde ahora en adelante, su ambiente de Anaconda ya esta activo en su home, por lo que la próxima ves que desee usar programas, solo debera cargar:
 ```
 ml Java/1.8.0_202
 ml FastQC
