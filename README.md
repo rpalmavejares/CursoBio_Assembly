@@ -26,7 +26,14 @@ bash
 conda activate cursobio
 ```
 
-### Desde ahora en adelante, solo debera usar el comando conda activate cursobio para poder trabajar con los programas solicitados
+### Desde ahora en adelante, su ambiente de Anaconda ya esta activo en su home, por lo que la procima ves que desee usar programas, solo debera cargar:
+```
+ml Java/1.8.0_202
+ml FastQC
+conda activate cursobio
+```
+
+
 
 ## Paso 3: Quality. FastQC Para illumina y PacBio.
 
