@@ -9,8 +9,9 @@ cp -r /home/dbs/G”Numero de grupo”_”nombre_del_organismo”/ ./
 
 Ejemplo: 
 
-$ cp -r home/dbs/bio-hpc/Curso_Cosas/G1_Aureimonas_altamirensis/ .
-
+```
+cp -r home/dbs/bio-hpc/Curso_Cosas/G1_Aureimonas_altamirensis/ .
+```
 ########################################################## 
 
 
@@ -18,45 +19,49 @@ Paso 2:
 
 Cargar los modulos necesarios en la consola:
 
-$ ml Java/1.8.0_202
-$ ml FastQC
-$ ml Anaconda3/2020.02
-$ conda activate bio-hpc
+```
+ml Java/1.8.0_202
+ml FastQC
+ml Anaconda3/2020.02
+conda init bash
+bash
+conda activate cursobio
+```
 
-#en caso que el ambiente bio-hpc no funcione
+### Desde ahora en adelante, solo debera usar el comando conda activate cursobio para poder trabajar con los programas solicitados
 
-$ ml Anaconda3/2020.02
-$ conda init bash
-$ bash
-$ conda env create -f cursobio.yml
-
-$conda activate cursobio
-
-
-Paso 2: Quality.
+## Paso 2: Quality.
 
 FastQC Para illumina y PacBio.
 
-$ cd G”Numero de grupo”_”nombre_del_organismo”
-
+```
+cd G”Numero de grupo”_”nombre_del_organismo”
+```
 
 Para ejecutar FastQC debera editar el archivo de jobs. Puede usar el ejemplo Job. (ejemplo_job.sh)
 
-#Agregar al archivo con cualquier editor de texto la linea de comando:
+*Agregar al archivo con cualquier editor de texto la linea de comando:
 
+```
 fastqc -t 5 “Direcction con los archivos fastq de Illumina” 
+```
 
 Ejemplo: 
- 
-$ fastqc -t 5 Illumina_paired/SRR18249971_1.fastq
+``` 
+fastqc -t 5 Illumina_paired/SRR18249971_1.fastq
+```
 
 Cerramos el archivo y lo ejecutamos como:
 
-$ sbatch ejemplo_job.sh
+```
+sbatch ejemplo_job.sh
 
+```
 Recuerde que puede ver la cola de procesos con el comando:
-$ squeue 
-$ watch squeue
+```
+squeue 
+watch squeue
+```
 
 Una ves terminada la ejecucion, los resultados quedaran en un archivo llamado “name”_1.fastq.html
 
