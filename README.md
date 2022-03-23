@@ -48,6 +48,18 @@ Para ejecutar FastQC debera editar el archivo de jobs. Puede usar el ejemplo Job
 *Agregar al archivo con cualquier editor de texto la linea de comando:
 
 ```
+#!/bin/bash
+#SBATCH --job-name=TareasCurso
+#SBATCH --partition=slims
+#SBATCH --output=out.%a.%N.%j.out
+#SBATCH --error=out.%a.%N.%j.err
+#SBATCH --mail-user=example@corre.com
+#SBATCH --mail-type=ALL
+#SBATCH -n 1 # number of jobs
+#SBATCH -c 5 # number of cpu
+##SBATCH --array=1-24
+#SBATCH --mem=20G
+
 fastqc -t 5 “Direcction con los archivos fastq de Illumina” 
 ```
 
