@@ -72,7 +72,6 @@ Cerramos el archivo y lo ejecutamos como:
 
 ```
 sbatch ejemplo_job.sh
-
 ```
 Recuerde que puede ver la cola de procesos con el comando:
 ```
