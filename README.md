@@ -4,7 +4,7 @@
 ## Paso 1: Copiar los datos a su home o usuario
 
 ```
-cp -r /home/dbs/G”Numero de grupo”_”nombre_del_organismo”/ ./
+cp -r /home/dbs/bio-hpc/Curso_Cosas/G”Numero de grupo”_”nombre_del_organismo”/ ./
 ```
 
 Ejemplo: 
